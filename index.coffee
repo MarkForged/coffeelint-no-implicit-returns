@@ -20,7 +20,7 @@ module.exports = class NoImplicitReturns
 
     # Ignore empty functions.
     expressions = code.body.expressions
-    lastExpr = code.body.lastNonComment expressions
+    lastExpr = code.body.lastNode expressions
     if not lastExpr?
       return
 
