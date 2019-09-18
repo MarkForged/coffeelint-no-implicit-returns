@@ -1,5 +1,5 @@
 {
-  "name": "coffeelint-no-implicit-returns",
+  "name": "coffeelint-no-implicit-returns-2",
   "version": "0.0.6",
   "description": "Checks for explicit returns in multi-line functions",
   "main": "index.coffee",
