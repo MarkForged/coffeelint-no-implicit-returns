@@ -20,8 +20,8 @@ module.exports = class NoImplicitReturns
 
     # Ignore empty functions.
     expressions = code.body.expressions
-    lastExpr = code.body.lastNonComment expressions
-    if not lastExpr?
+    lastExpr = code.body.lastNonComment?(expressions)
+    if not lastExpr? or not lastExpr
       return
 
     # An expression is a pure statement if it jumps(), i.e. contains:

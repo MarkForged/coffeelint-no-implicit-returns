@@ -3,6 +3,14 @@
   "version": "0.0.7",
   "description": "Checks for explicit returns in multi-line functions",
   "main": "index.js",
+  "scripts": {
+    "build": "coffee -c index.coffee",
+    "commit-generated-files": "git add index.js"
+  },
+  "pre-commit": [
+    "build",
+    "commit-generated-files"
+  ],
   "keywords": [
     "coffeelint",
     "coffeelintrule",
@@ -34,6 +42,7 @@
     "coffeelint": ">=1.4"
   },
   "devDependencies": {
-    "coffee-script": "~1.7.0"
+    "coffee-script": "~1.7.0",
+    "pre-commit": "1.2.2"
   }
 }
